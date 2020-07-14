@@ -1,14 +1,14 @@
-# Docker image for citeproc-node app
+# Docker image for ivos/citeproc-js-server app
 # Usage: $ docker run -d -p 8085:8085 -t {this image}
 
 FROM node
-MAINTAINER LibreCat community <librecat-dev@lists.uni-bielefeld.de>
+MAINTAINER Ivo Maixner <ivo.maixner@gmail.com>
 
 # append nodejs binaries TO PATH
 ENV PATH node_modules/.bin:$PATH
 
 # Add source
-RUN git clone --recurse-submodules https://github.com/zotero/citeproc-js-server.git
+RUN git clone --recurse-submodules https://github.com/ivos/citeproc-js-server.git
 WORKDIR citeproc-js-server
 RUN npm install
 
